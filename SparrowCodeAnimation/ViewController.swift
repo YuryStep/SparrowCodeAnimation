@@ -39,6 +39,10 @@ final class ViewController: UIViewController {
         return animator
     }()
 
+    deinit {
+        animator.pausesOnCompletion = false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
